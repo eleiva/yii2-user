@@ -33,7 +33,7 @@ class Bootstrap implements BootstrapInterface
             $app->setModule('user', [
                 'class' => 'dektrium\user\Module'
             ]);
-            $identityClass = 'dektrium\user\models\User';
+            $identityClass = 'common\models\User';
         }
 
         if ($app instanceof \yii\console\Application) {

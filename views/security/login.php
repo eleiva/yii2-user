@@ -23,10 +23,10 @@ $this->title = Yii::t('user', 'Sign in');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-4 col-md-offset-2">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><?= Html::encode($this->title) ?></h3>
+                <h3 class="panel-title text-center"><?= Html::encode($this->title) ?></h3>
             </div>
             <div class="panel-body">
                 <?php $form = ActiveForm::begin([
@@ -47,8 +47,22 @@ $this->params['breadcrumbs'][] = $this->title;
         <p class="text-center">
             <?= Html::a(Yii::t('user', 'Didn\'t receive confirmation message?'), ['/user/registration/resend']) ?>
         </p>
+         <p class="text-center">
+            <?= Html::a(Yii::t('user', 'Not registered get?'), ['/user/registration/register']) ?>
+        </p>
+
         <?= Connect::widget([
             'baseAuthUrl' => ['/user/security/auth']
         ]) ?>
+    </div>
+     <div class="col-md-4 ">
+        <div class="panel panel-default">
+           <div class="panel-heading">
+                <h3 class="panel-title text-center"><?= Html::encode($this->title) ?></h3>
+          </div>
+          <div class="panel-body text-center">
+            <?php echo \nodge\eauth\Widget::widget(array('action' => '/site/login')); ?>
+          </div>
+        </div>
     </div>
 </div>
