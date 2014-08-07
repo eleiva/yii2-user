@@ -34,12 +34,12 @@ class ModelManager extends Component
     /**
      * @var string
      */
-    public $userClass = 'dektrium\user\models\User';
+    public $userClass = 'common\models\User';
 
     /**
      * @var string
      */
-    public $profileClass = 'dektrium\user\models\Profile';
+    public $profileClass = 'common\models\Profile';
 
     /**
      * @var string

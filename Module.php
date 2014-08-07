@@ -75,13 +75,13 @@ class Module extends BaseModule
      * @var array The rules to be used in URL management.
      */
     public $urlRules = [
-        '<id:\d+>' => 'profile/show',
-        '<action:(login|logout)>' => 'security/<action>',
-        '<action:(register|resend)>' => 'registration/<action>',
-        'confirm/<id:\d+>/<token:\w+>' => 'registration/confirm',
-        'forgot' => 'recovery/request',
-        'recover/<id:\d+>/<token:\w+>' => 'recovery/reset',
-        'settings/<action:\w+>' => 'settings/<action>'
+         '<language:(pt|es|en)>/<id:\d+>' => 'profile/show',
+         '<language:(pt|es|en)>/<action:(login|logout)>' => 'security/<action>',
+         '<language:(pt|es|en)>/<action:(register|resend)>' => 'registration/<action>',
+         '<language:(pt|es|en)>/confirm/<id:\d+>/<token:\w+>' => 'registration/confirm',
+         '<language:(pt|es|en)>/user/forgot' => 'recovery/request',
+         '<language:(pt|es|en)>/recover/<id:\d+>/<token:\w+>' => 'recovery/reset',
+         '<language:(pt|es|en)>/settings/<action:\w+>' => 'settings/<action>'
     ];
 
     /**
